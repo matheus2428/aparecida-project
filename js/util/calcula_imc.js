@@ -18,7 +18,7 @@ for (var i = 0; i< pacientes.length; i++){
 
     var tdImc = paciente.querySelector(".info-imc");
 
-    //variável booleana para verficiar o peso e altura
+    //variável booleana para verificar o peso e altura
     var pesoVal = true;
     var alturaVal = true; 
 
@@ -34,15 +34,15 @@ for (var i = 0; i< pacientes.length; i++){
     }
 
     if ((alturaVal=true) && (pesoVal=true)){
-        var imc = peso/(altura * altura);
-        tdImc.textContent = imc.toFixed(2);
+        var imc = calculaImc(peso, altura);
+        tdImc.textContent = imc;
     }
 }
 
-
-var botaoAdd = querySelector("#adicionar-paciente");
-
-botaoAdd.addEventListener("click", function(event){
-    event.preventDefault();
+function calculaImc(peso, altura){
+    var imc = 0;
     
-});
+    imc = peso / (altura*altura);
+
+    return imc.toFixed(2);;
+}

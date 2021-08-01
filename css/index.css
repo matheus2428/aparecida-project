@@ -120,7 +120,7 @@ button{
     margin: 10px 0px;
 	border-radius: 0.625rem;
 
-	transition: margin-top 0.40s, border-bottom 0.4s, border-right 0.4s;
+	transition: margin-top 0.3s, border-bottom 0.3s, border-right 0.3s;
 
 }
 
