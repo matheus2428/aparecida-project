@@ -32,15 +32,15 @@
 						<tr class="paciente" id="primeiro-paciente">
 							<td class="info-nome">Paulo</td>
 							<td class="info-peso">100</td>
-							<td class="info-altura">2.00</td>
+							<td class="info-altura">20.00</td>
 							<td class="info-gordura">10</td>
 							<td class="info-imc">0</td>
 						</tr>
 
 						<tr class="paciente" >
 							<td class="info-nome">João</td>
-							<td class="info-peso">80</td>
-							<td class="info-altura">1.72</td>
+							<td class="info-peso">800</td>
+							<td class="info-altura">15.72</td>
 							<td class="info-gordura">40</td>
 							<td class="info-imc">0</td>
 						</tr>
@@ -72,22 +72,23 @@
 
 			</section>
 			<!-- ... -->
-			<section class="container">
+			<section id="section2" class="container">
 				<h2 id="titulo-form">Adicionar novo paciente</h2>
+				<ul id="mensagens-erro"></ul>
 				<form id="form-adiciona">
-					<div class="grupo">
+					<div id="nomeId"class="grupo">
 						<label for="nome">Nome:</label>
 						<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
 					</div>
-					<div class="grupo">
+					<div id="pesoId" class="grupo">
 						<label for="peso">Peso:</label>
 						<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
 					</div>
-					<div class="grupo">
+					<div id="alturaId"class="grupo">
 						<label for="altura">Altura:</label>
 						<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
 					</div>
-					<div class="grupo">
+					<div id="gorduraId" class="grupo">
 						<label for="gordura">% de Gordura:</label>
 						<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
 					</div>
@@ -96,6 +97,8 @@
 				</form>
 			</section>
 		</main>
+		<script src="/js/util/validaAltura.js"></script>
+		<script src="/js/util/validaPeso.js"></script>
 		<script src="/js/util/calcula_imc.js"></script>
 		<script src="/js/form/form.js"></script>
 		<script src="/js/form/getFormInfo.js"></script>

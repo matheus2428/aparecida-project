@@ -8,7 +8,6 @@ for (var i = 0; i< pacientes.length; i++){
 
     //busca pela classe 'info-peso' e armazena na variável tdPeso
     var tdPeso = paciente.querySelector(".info-peso");
-
     //pega o conteúdo de texto da variável tdPeso e armazena na variável 'peso'
     var peso = tdPeso.textContent;
 
@@ -19,21 +18,25 @@ for (var i = 0; i< pacientes.length; i++){
     var tdImc = paciente.querySelector(".info-imc");
 
     //variável booleana para verificar o peso e altura
-    var pesoVal = true;
-    var alturaVal = true; 
+    var pesoVal = validaPeso(peso);
+    var alturaVal = validaAltura(altura); 
 
-    if(peso <= 0 || peso >= 400){
-        pesoVal = false;
+    if(!pesoVal){
+        pesoVal=false;
         tdImc.textContent = "Peso inválido";
-        paciente.classList.add("paciente-invalido")
+        paciente.classList.add("paciente-invalido");
     }
-    if(altura <= 0 || altura >= 2.50){
-        alturaVal = false;
+    if(!alturaVal){
+        alturaVal=false;
         tdImc.textContent = "Altura inválida";
-        paciente.classList.add("paciente-invalido")
+        paciente.classList.add("paciente-invalido");
+    }
+    if (!alturaVal && !pesoVal){
+        tdImc.textContent = "Altura e peso inválidos";
+        paciente.classList.add("paciente-invalido");
     }
 
-    if ((alturaVal=true) && (pesoVal=true)){
+    if (alturaVal && pesoVal){
         var imc = calculaImc(peso, altura);
         tdImc.textContent = imc;
     }

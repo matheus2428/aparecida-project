@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
 *{
 	box-sizing: border-box;
  }
 
 body{
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	font-size: 0.875rem;
 	font-weight: 800;
 	background: #EEE;
@@ -45,13 +45,18 @@ header .container:before{
 }
 
 section{
+	display: block;
+	justify-items: center;
+	align-items: center;
 	margin: 2em 0;
 	overflow: hidden;
 }
 
 section h2{
+	display: grid;
+	justify-items: center;
+	align-items: center;
 	font-size: 3em;
-	display: block;
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: .5em;
@@ -98,37 +103,38 @@ label{
 
 .grupo{
 	width: 32%;
-	display: inline-block;
 	padding: 10px 0px;
 }
 
 button{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bolder;
 	padding: .5em 2em;
-	border: 0;
-	border-bottom: 5px solid;
-	border-right: 4px solid;
+	border: 1px solid green;
 	font-size: 1.2em;
 	cursor: pointer;
 	margin: 0;
 	margin-top: -3px;
 	color: rgb(0, 0, 0);
 	background-color:rgba(132,254,134,1);
-	border-color: rgba(0,128,102,1);
 	width: 9.375rem;
     display: block;
     clear: both;
     margin: 10px 0px;
-	border-radius: 0.625rem;
+	border-radius: 5px;
 
-	transition: margin-top 0.3s, border-bottom 0.3s, border-right 0.3s;
+	transition: background 0.75s, color 0.75s, border-radius 0.75s;
 
+}
+button:hover{
+	background: rgba(0, 196, 0, 0.39);
+	color:  black;
+	border-radius: 25px;
 }
 
 button:active{
 	margin-top:13px;
-	border-bottom: 2px solid;
-	border-right: 2px solid;
-	border-color: rgba(0,128,102,1);
+	border: 0;
 }
 
 button[disabled=disabled], button:disabled {
@@ -146,4 +152,24 @@ button[disabled=disabled], button:disabled {
 }
 .paciente-invalido{
 	background-color: lightcoral;
+}
+#form-adiciona {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+
+}
+.botao-erro{
+	padding: 10px;
+	justify-items: center;
+	align-items: center;
+	background-color: lightcoral;
+	border: 2px solid red;
+	border-radius: 10px;
+	animation: fadeIn linear 2.5s;
+
+}
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
 }

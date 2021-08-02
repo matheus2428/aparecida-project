@@ -22,5 +22,18 @@ function buildTr(paciente){
     pacienteTr.appendChild(gorduraTd);
     pacienteTr.appendChild(imcTd);
 
+    var erros = validaPaciente(paciente);
+    console.log(erros);
+    if(erros.length > 0){
+        exibeMsgErro(erros);
+
+        return;
+    }
+
+
     addToTable(pacienteTr);
+    var msgDeErro = document.querySelector("#mensagens-erro");
+    msgDeErro.innerHTML= "";
+    msgDeErro.style.display = "none";
+ 
 }
