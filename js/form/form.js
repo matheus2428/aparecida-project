@@ -10,15 +10,8 @@ botaoAdd.addEventListener("click", function(event){
     var paciente = getFormInfo(form);
 //Monta a Tr do paciente novo
     buildTr(paciente);
-    
 //Reseta os campos depois de enviar as informações
     form.reset();
-
-   
-
-    
-    
-    
 });
 
 function exibeMsgErro(erros){
