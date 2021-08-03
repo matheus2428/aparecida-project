@@ -165,11 +165,15 @@ button[disabled=disabled], button:disabled {
 }
 
 #filtrar-tabela{
+	outline: 0;
 	padding: 10px;
 	margin-bottom: 15px;
 	width: 200px;
 	height: 35px;
 	border-radius: 15px;
+}
+.invisivel{
+	display: none;
 }
 .botao-erro{
 	padding: 10px;
