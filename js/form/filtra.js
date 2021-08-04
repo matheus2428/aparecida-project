@@ -8,7 +8,7 @@ campoFiltro.addEventListener("input", function(){
             var paciente = pacientes[i];
             var tdNome = paciente.querySelector(".info-nome");
             var nome = tdNome.textContent;
-            //RegExp - expressao regular para buscar e comparar todas as letras digitadas com as da tabela de pacientes
+            //RegExp - expressao regular para buscar o texto (1 parametro) e como deve ser buscado (2 parametro).
             var expressao = new RegExp(this.value, "i");
             //função .test serve para testar algo passando por parâmetro, aqui no caso, o "nome", retorna positivo ou negativo
             if( !expressao.test(nome)){

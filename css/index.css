@@ -48,18 +48,17 @@ section{
 	display: block;
 	justify-items: center;
 	align-items: center;
-	margin: 2em 0;
+	margin-top: 15px;
 	overflow: hidden;
+	border-bottom: 1px solid #ccc;
 }
 
 section h2{
-	display: grid;
-	justify-items: center;
-	align-items: center;
+	padding-top: 15px;
 	font-size: 3em;
-	padding-bottom: .5em;
+	padding-bottom: 15px;
 	border-bottom: 1px solid #ccc;
-	margin-bottom: .5em;
+	margin-bottom: 15px;
 }
 
 table{
@@ -105,25 +104,32 @@ label{
 	width: 32%;
 	padding: 10px 0px;
 }
+.botao{
+	position: relative;
+}
 
 button{
 	font-family: 'Quicksand', sans-serif;
-	font-weight: bolder;
-	padding: .5em 2em;
+	display: block;
+	font-weight: bold;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	border: 1px solid green;
 	font-size: 1.2em;
 	cursor: pointer;
-	margin: 0;
-	margin-top: -3px;
 	color: rgb(0, 0, 0);
 	background-color:rgba(132,254,134,1);
-	width: 9.375rem;
-    display: block;
+	width: 170px;
     clear: both;
-    margin: 10px 0px;
 	border-radius: 5px;
 
-	transition: background 0.75s, color 0.75s, border-radius 0.75s;
+	transition: 
+		background 0.75s, 
+		color 0.75s, 
+		border-radius 0.75s, 
+		width 0.3s,
+		padding 0.3s;
 
 }
 button:hover{
@@ -133,8 +139,8 @@ button:hover{
 }
 
 button:active{
-	margin-top:13px;
-	border: 0;
+	width: 160px;
+	padding: 10px;
 }
 
 button[disabled=disabled], button:disabled {
@@ -154,11 +160,13 @@ button[disabled=disabled], button:disabled {
 	background-color: lightcoral;
 }
 #form-adiciona {
-	display: grid;
+	display: block;
 	justify-items: center;
 	align-items: center;
 
+
 }
+
 .fadeOut{
 	opacity: 0;
 	transition: 0.5s;
